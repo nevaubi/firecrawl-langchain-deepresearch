@@ -1,20 +1,20 @@
 // Search Engine Configuration
 export const SEARCH_CONFIG = {
   // Search Settings
-  MAX_SEARCH_QUERIES: 2,        // Maximum number of search queries to generate
-  MAX_SOURCES_PER_SEARCH: 3,     // Maximum sources to return per search query
-  MAX_SOURCES_TO_SCRAPE: 3,      // Maximum sources to scrape for additional content
+  MAX_SEARCH_QUERIES: 16,        // Maximum number of search queries to generate
+  MAX_SOURCES_PER_SEARCH: 6,     // Maximum sources to return per search query
+  MAX_SOURCES_TO_SCRAPE: 20,      // Maximum sources to scrape for additional content
   
   // Content Processing
   MIN_CONTENT_LENGTH: 100,       // Minimum content length to consider valid
   SUMMARY_CHAR_LIMIT: 200,       // Character limit for source summaries
   CONTEXT_PREVIEW_LENGTH: 500,   // Preview length for previous context
   ANSWER_CHECK_PREVIEW: 2500,    // Content preview length for answer checking
-  MAX_SOURCES_TO_CHECK: 10,      // Maximum sources to check for answers
+  MAX_SOURCES_TO_CHECK: 30,      // Maximum sources to check for answers
   
   // Retry Logic
   MAX_RETRIES: 2,                // Maximum retry attempts for failed operations
-  MAX_SEARCH_ATTEMPTS: 2,        // Maximum attempts to find answers via search
+  MAX_SEARCH_ATTEMPTS: 12,        // Maximum attempts to find answers via search
   MIN_ANSWER_CONFIDENCE: 0.3,    // Minimum confidence (0-1) that a question was answered
   EARLY_TERMINATION_CONFIDENCE: 0.8, // Confidence level to skip additional searches
   
@@ -35,7 +35,6 @@ export const UI_CONFIG = {
 
 // Model Configuration
 export const MODEL_CONFIG = {
-  FAST_MODEL: "gpt-4.1-mini",     // Fast model for quick operations
-  QUALITY_MODEL: "gpt-4.1",       // High-quality model for final synthesis
-  TEMPERATURE: 0,                // Model temperature (0 = deterministic)
+  FAST_MODEL: "gpt-5.1",     // Fast model for quick operations
+  QUALITY_MODEL: "gpt-5.1"      // High-quality model for final synthe
 } as const;
